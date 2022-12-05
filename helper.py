@@ -198,8 +198,8 @@ ddt_dL_dqdot = sym.Matrix([ddt_dL_dqdot])
 EL = dL_dq - ddt_dL_dqdot
 EL = EL.T # express EL as a coln vector
 EL_eqn = sym.Eq(sym.simplify(ddt_dL_dqdot - dL_dq), sym.Matrix([tau]))
-print('Euler-Lagrange Equation:')
-display(sym.simplify(EL_eqn))
+# print('Euler-Lagrange Equation:')
+# display(sym.simplify(EL_eqn))
 
 a = sym.Matrix([thddot])
 EL_soln = sym.solve(EL_eqn, a, dict=True)
@@ -210,7 +210,7 @@ func = []
 for sol in EL_soln:
     print('\nSolution of EL eqn in variables: ')
     for i in a:
-        display(sym.simplify(sym.Eq(i, sol[i])))
+        # display(sym.simplify(sym.Eq(i, sol[i])))
         func.append(sol[i])
 
 # substitute constants into symbolic solutions

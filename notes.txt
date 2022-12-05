@@ -1,4 +1,3 @@
 - we probably need to frame this as a learning problem very explicitly
 - is a single pendulum nonlinear? it is right?
 - idk if we need the animation? maybe just a picture could be good
-- do a spell check
